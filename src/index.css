@@ -26,7 +26,7 @@ body {
 
 .centering {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -93,4 +93,25 @@ body {
   margin-top: -4px;
   margin-right: -4px;
   color: white;
+}
+
+.custom-shape-divider-bottom-1697618662 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1697618662 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 103px;
+}
+
+.custom-shape-divider-bottom-1697618662 .shape-fill {
+  fill: #ffffff;
 }
