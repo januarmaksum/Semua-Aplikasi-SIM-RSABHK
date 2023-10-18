@@ -2,10 +2,13 @@ import bgImage from "./assets/images/rsabhk-view.jpg";
 import Logo from "./assets/images/logo-rsabhk.png";
 import { useState } from "react";
 import Card from "./components/Card";
-import { MdMedicalServices, MdOndemandVideo } from "react-icons/md";
+import { MdOndemandVideo, MdMiscellaneousServices } from "react-icons/md";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { BiSolidDashboard } from "react-icons/bi";
-import { BsFillInfoSquareFill } from "react-icons/bs";
+import { BsFillInfoSquareFill, BsFillHeartPulseFill } from "react-icons/bs";
+import { FaAmbulance, FaProcedures } from "react-icons/fa";
+import { TbDeviceAnalytics, TbChartInfographic } from "react-icons/tb";
+import { LuListVideo } from "react-icons/lu";
 
 const tabsLink = [
   // { id: 0, text: "SEMUA APLIKASI" },
@@ -68,31 +71,25 @@ function App() {
           title={"SIMRS"}
           category={"Pelayanan"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<MdMiscellaneousServices />}
         />
         <Card
           title={"KEPERAWATAN"}
           category={"Pelayanan"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
-        />
-        <Card
-          title={"SIMRS"}
-          category={"DOKTER"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<BsFillHeartPulseFill />}
         />
         <Card
           title={"IGD"}
           category={"Pelayanan"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<FaAmbulance />}
         />
         <Card
           title={"REHAB MEDIK"}
           category={"Pelayanan"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<FaProcedures />}
         />
       </>
     );
@@ -105,25 +102,25 @@ function App() {
           title={"EIS"}
           category={"Dashboard"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<TbDeviceAnalytics />}
         />
         <Card
           title={"DASHBOARD"}
           category={"Dashboard"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<TbDeviceAnalytics />}
         />
         <Card
           title={"VEDIKA"}
           category={"Dashboard"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<TbDeviceAnalytics />}
         />
         <Card
           title={"REKAM MEDIK"}
           category={"Dashboard"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<TbDeviceAnalytics />}
         />
       </>
     );
@@ -136,25 +133,25 @@ function App() {
           title={"BIOS"}
           category={"Bridging"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<TbChartInfographic />}
         />
         <Card
           title={"SAKTI"}
           category={"Bridging"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<TbChartInfographic />}
         />
         <Card
           title={"SATUSEHAT"}
           category={"Bridging"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<TbChartInfographic />}
         />
         <Card
           title={"KTC"}
           category={"Bridging"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<TbChartInfographic />}
         />
       </>
     );
@@ -167,25 +164,25 @@ function App() {
           title={"CARA DAFTAR PASIEN"}
           category={"Tutorial"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<LuListVideo />}
         />
         <Card
           title={"CARA MEMBUAT REKAM MEDIS"}
           category={"Tutorial"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<LuListVideo />}
         />
         <Card
           title={"CARA DAFTAR RAWAT INAP"}
           category={"Tutorial"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<LuListVideo />}
         />
         <Card
           title={"CARA MEMBUAT WEBSITE"}
           category={"Tutorial"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalServices />}
+          icon={<LuListVideo />}
         />
       </>
     );
