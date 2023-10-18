@@ -2,13 +2,15 @@ import bgImage from "./assets/images/rsabhk-view.jpg";
 import Logo from "./assets/images/logo-rsabhk.png";
 import { useState } from "react";
 import Card from "./components/Card";
-import { MdOndemandVideo, MdMiscellaneousServices } from "react-icons/md";
+import { MdOndemandVideo, MdMiscellaneousServices, MdTableView, MdMedicalInformation } from "react-icons/md";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { BiSolidDashboard } from "react-icons/bi";
-import { BsFillInfoSquareFill, BsFillHeartPulseFill } from "react-icons/bs";
-import { FaAmbulance, FaProcedures } from "react-icons/fa";
-import { TbDeviceAnalytics, TbChartInfographic } from "react-icons/tb";
-import { LuListVideo } from "react-icons/lu";
+import { BsFillInfoSquareFill, BsTable } from "react-icons/bs";
+import { FaAmbulance, FaProcedures, FaUserNurse, FaHandHoldingMedical } from "react-icons/fa";
+import { TbDeviceAnalytics, TbChartInfographic, TbReportSearch } from "react-icons/tb";
+import { CgShutterstock } from "react-icons/cg";
+import { DiGoogleAnalytics } from "react-icons/di";
+import { FaHouseMedicalCircleExclamation } from "react-icons/fa6";
 
 const tabsLink = [
   // { id: 0, text: "SEMUA APLIKASI" },
@@ -68,16 +70,17 @@ function App() {
     return (
       <>
         <Card
-          title={"SIMRS"}
+          title={"SMART RSABHK"}
           category={"Pelayanan"}
           link={"https://smart.rsabhk.co.id:2222/"}
           icon={<MdMiscellaneousServices />}
+          onClick={() => window.open("https://smart.rsabhk.co.id:2222/")}
         />
         <Card
           title={"KEPERAWATAN"}
           category={"Pelayanan"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<BsFillHeartPulseFill />}
+          icon={<FaUserNurse />}
         />
         <Card
           title={"IGD"}
@@ -103,29 +106,25 @@ function App() {
           category={"Dashboard"}
           link={"https://smart.rsabhk.co.id:2222/"}
           icon={<TbDeviceAnalytics />}
-        />
-        <Card
-          title={"DASHBOARD"}
-          category={"Dashboard"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbDeviceAnalytics />}
-        />
+          onClick={() => window.open("https://eis.rsabhk.co.id/auth/login")}
+          />
         <Card
           title={"VEDIKA"}
           category={"Dashboard"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbDeviceAnalytics />}
-        />
+          icon={<BsTable />}
+          onClick={() => window.open("https://vedika.rsabhk.co.id/")}
+          />
         <Card
           title={"REKAM MEDIK"}
           category={"Dashboard"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbDeviceAnalytics />}
-        />
+          icon={<TbReportSearch />}
+          />
       </>
     );
   }
-
+  
   function element4() {
     return (
       <>
@@ -133,13 +132,14 @@ function App() {
           title={"BIOS"}
           category={"Bridging"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbChartInfographic />}
+          icon={<MdTableView />}
+          onClick={() => window.open("https://bridge.rsabhk.co.id/auth/login")}
         />
         <Card
           title={"SAKTI"}
           category={"Bridging"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbChartInfographic />}
+          icon={<CgShutterstock />}
         />
         <Card
           title={"SATUSEHAT"}
@@ -148,10 +148,10 @@ function App() {
           icon={<TbChartInfographic />}
         />
         <Card
-          title={"KTC"}
+          title={"KYC"}
           category={"Bridging"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbChartInfographic />}
+          icon={<DiGoogleAnalytics />}
         />
       </>
     );
@@ -164,25 +164,19 @@ function App() {
           title={"CARA DAFTAR PASIEN"}
           category={"Tutorial"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<LuListVideo />}
+          icon={<FaHouseMedicalCircleExclamation />}
         />
         <Card
           title={"CARA MEMBUAT REKAM MEDIS"}
           category={"Tutorial"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<LuListVideo />}
+          icon={<MdMedicalInformation />}
         />
         <Card
           title={"CARA DAFTAR RAWAT INAP"}
           category={"Tutorial"}
           link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<LuListVideo />}
-        />
-        <Card
-          title={"CARA MEMBUAT WEBSITE"}
-          category={"Tutorial"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<LuListVideo />}
+          icon={<FaHandHoldingMedical />}
         />
       </>
     );
@@ -224,7 +218,7 @@ function App() {
               APLIKASI SIMRS
             </h1>
             <p className="text-center font-semibold">
-              APLIKASI PENUNJANG PELAYANAN DAN UNIT RS KANKER &quot;RSABHK&quot;
+              APLIKASI PENUNJANG PELAYANAN DAN UNIT RS &quot;RSABHK&quot;
             </p>
           </div>
         </div>
