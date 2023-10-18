@@ -2,10 +2,13 @@ import bgImage from "./assets/images/rsabhk-view.jpg";
 import Logo from "./assets/images/logo-rsabhk.png";
 import { useState } from "react";
 import Card from "./components/Card";
-import { FiChevronsRight } from "react-icons/fi";
+import { MdMedicalServices, MdOndemandVideo } from "react-icons/md";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { BiSolidDashboard } from "react-icons/bi";
+import { BsFillInfoSquareFill } from "react-icons/bs";
 
 const tabsLink = [
-  { id: 0, text: "SEMUA APLIKASI" },
+  // { id: 0, text: "SEMUA APLIKASI" },
   { id: 1, text: "PELAYANAN" },
   { id: 2, text: "DASHBOARD" },
   { id: 3, text: "BRIDGING" },
@@ -23,18 +26,183 @@ function App() {
     setActiveTabs(current);
   };
 
+  function element1() {
+    return (
+      <>
+        <Card
+          title={"PELAYANAN"}
+          category={"Pelayanan"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          onClick={() => handleTabs(1)}
+          icon={<RiCustomerService2Fill />}
+        />
+        <Card
+          title={"DASHBOARD"}
+          category={"Pelayanan"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          onClick={() => handleTabs(2)}
+          icon={<BiSolidDashboard />}
+        />
+        <Card
+          title={"BRIDGING"}
+          category={"DOKTER"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          onClick={() => handleTabs(3)}
+          icon={<BsFillInfoSquareFill />}
+        />
+        <Card
+          title={"TUTORIAL"}
+          category={"Pelayanan"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          onClick={() => handleTabs(4)}
+          icon={<MdOndemandVideo />}
+        />
+      </>
+    );
+  }
+
+  function element2() {
+    return (
+      <>
+        <Card
+          title={"SIMRS"}
+          category={"Pelayanan"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"KEPERAWATAN"}
+          category={"Pelayanan"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"SIMRS"}
+          category={"DOKTER"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"IGD"}
+          category={"Pelayanan"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"REHAB MEDIK"}
+          category={"Pelayanan"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+      </>
+    );
+  }
+
+  function element3() {
+    return (
+      <>
+        <Card
+          title={"EIS"}
+          category={"Dashboard"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"DASHBOARD"}
+          category={"Dashboard"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"VEDIKA"}
+          category={"Dashboard"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"REKAM MEDIK"}
+          category={"Dashboard"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+      </>
+    );
+  }
+
+  function element4() {
+    return (
+      <>
+        <Card
+          title={"BIOS"}
+          category={"Bridging"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"SAKTI"}
+          category={"Bridging"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"SATUSEHAT"}
+          category={"Bridging"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"KTC"}
+          category={"Bridging"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+      </>
+    );
+  }
+
+  function element5() {
+    return (
+      <>
+        <Card
+          title={"CARA DAFTAR PASIEN"}
+          category={"Tutorial"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"CARA MEMBUAT REKAM MEDIS"}
+          category={"Tutorial"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"CARA DAFTAR RAWAT INAP"}
+          category={"Tutorial"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+        <Card
+          title={"CARA MEMBUAT WEBSITE"}
+          category={"Tutorial"}
+          link={"https://smart.rsabhk.co.id:2222/"}
+          icon={<MdMedicalServices />}
+        />
+      </>
+    );
+  }
+
   const elements = () => {
     switch (tabs) {
       case 1:
-        return <Element2 />;
+        return element2();
       case 2:
-        return <Element3 />;
+        return element3();
       case 3:
-        return <Element4 />;
+        return element4();
       case 4:
-        return <Element5 />;
+        return element5();
       default:
-        return <Element1 />;
+        return element1();
     }
   };
 
@@ -103,11 +271,35 @@ function App() {
                       } inline-flex px-3 py-1 rounded-[3px] items-center gap-2 cursor-pointer`}
                       onClick={() => handleTabs(item.id)}
                     >
-                      <FiChevronsRight
-                        className={`${
-                          active ? "text-white" : ""
-                        } text-green-900`}
-                      />
+                      {item.id === 1 && (
+                        <RiCustomerService2Fill
+                          className={`${
+                            active ? "text-white" : ""
+                          } text-green-900`}
+                        />
+                      )}
+                      {item.id === 2 && (
+                        <BiSolidDashboard
+                          className={`${
+                            active ? "text-white" : ""
+                          } text-green-900`}
+                        />
+                      )}
+                      {item.id === 3 && (
+                        <BsFillInfoSquareFill
+                          className={`${
+                            active ? "text-white" : ""
+                          } text-green-900`}
+                        />
+                      )}
+                      {item.id === 4 && (
+                        <MdOndemandVideo
+                          className={`${
+                            active ? "text-white" : ""
+                          } text-green-900`}
+                        />
+                      )}
+
                       {item.text}
                     </div>
                   </li>
@@ -120,191 +312,6 @@ function App() {
           </div>
         </div>
       </section>
-    </>
-  );
-}
-
-export function Element1() {
-  return (
-    <>
-      <Card
-        title={"SIMRS"}
-        category={"Pelayanan"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"KEPERAWATAN"}
-        category={"Pelayanan"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"SIMRS"}
-        category={"DOKTER"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"IGD"}
-        category={"Pelayanan"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"REHAB MEDIK"}
-        category={"Pelayanan"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"EIS"}
-        category={"Dashboard"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"DASHBOARD"}
-        category={"Dashboard"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"VEDIKA"}
-        category={"Dashboard"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"REKAM MEDIK"}
-        category={"Dashboard"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"BIOS"}
-        category={"Bridging"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"SAKTI"}
-        category={"Bridging"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"SATUSEHAT"}
-        category={"Bridging"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"KTC"}
-        category={"Bridging"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-    </>
-  );
-}
-
-export function Element2() {
-  return (
-    <>
-      <Card
-        title={"SIMRS"}
-        category={"Pelayanan"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"KEPERAWATAN"}
-        category={"Pelayanan"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"SIMRS"}
-        category={"DOKTER"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"IGD"}
-        category={"Pelayanan"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"REHAB MEDIK"}
-        category={"Pelayanan"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-    </>
-  );
-}
-
-export function Element3() {
-  return (
-    <>
-      <Card
-        title={"EIS"}
-        category={"Dashboard"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"DASHBOARD"}
-        category={"Dashboard"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"VEDIKA"}
-        category={"Dashboard"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"REKAM MEDIK"}
-        category={"Dashboard"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-    </>
-  );
-}
-
-export function Element4() {
-  return (
-    <>
-      <Card
-        title={"BIOS"}
-        category={"Bridging"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"SAKTI"}
-        category={"Bridging"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"SATUSEHAT"}
-        category={"Bridging"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"KTC"}
-        category={"Bridging"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-    </>
-  );
-}
-
-export function Element5() {
-  return (
-    <>
-      <Card
-        title={"CARA DAFTAR PASIEN"}
-        category={"Tutorial"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"CARA MEMBUAT REKAM MEDIS"}
-        category={"Tutorial"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"CARA DAFTAR RAWAT INAP"}
-        category={"Tutorial"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
-      <Card
-        title={"CARA MEMBUAT WEBSITE"}
-        category={"Tutorial"}
-        link={"https://smart.rsabhk.co.id:2222/"}
-      />
     </>
   );
 }

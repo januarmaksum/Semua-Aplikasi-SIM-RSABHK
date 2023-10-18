@@ -75,6 +75,10 @@ body {
   color: #ffffff;
 }
 
+.card:hover .icons {
+    color: white!important;
+}
+
 .go-corner {
   display: flex;
   align-items: center;
