@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: #60606e;
@@ -132,5 +146,9 @@ body {
 
   .card:hover .icons {
     color: #047759 !important;
+  }
+
+  .card h3 {
+    font-size: 14px;
   }
 }
