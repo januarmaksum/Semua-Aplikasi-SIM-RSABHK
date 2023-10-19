@@ -36,8 +36,6 @@ function App() {
   const [activeTabs, setActiveTabs] = useState(0);
 
   const handleTabs = (current) => {
-    console.log(current);
-
     setTabs(current);
     setActiveTabs(current);
   };
