@@ -2,18 +2,29 @@ import bgImage from "./assets/images/rsabhk-view.jpg";
 import Logo from "./assets/images/logo-rsabhk.png";
 import { useState } from "react";
 import Card from "./components/Card";
-import { MdOndemandVideo, MdMiscellaneousServices, MdTableView, MdMedicalInformation } from "react-icons/md";
+import {
+  MdOndemandVideo,
+  MdMiscellaneousServices,
+  MdTableView,
+  MdMedicalInformation,
+} from "react-icons/md";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { BiSolidDashboard } from "react-icons/bi";
-import { BsFillInfoSquareFill, BsTable } from "react-icons/bs";
-import { FaAmbulance, FaProcedures, FaUserNurse, FaHandHoldingMedical } from "react-icons/fa";
-import { TbDeviceAnalytics, TbChartInfographic, TbReportSearch } from "react-icons/tb";
+import { BsFillInfoSquareFill, BsTable, BsPeopleFill } from "react-icons/bs";
+import {
+  FaAmbulance,
+  FaProcedures,
+  FaUserNurse,
+  FaHandHoldingMedical,
+} from "react-icons/fa";
+import { TbDeviceAnalytics, TbReportSearch } from "react-icons/tb";
 import { CgShutterstock } from "react-icons/cg";
-import { DiGoogleAnalytics } from "react-icons/di";
-import { FaHouseMedicalCircleExclamation } from "react-icons/fa6";
+import {
+  FaHouseMedicalCircleExclamation,
+  FaBookMedical,
+} from "react-icons/fa6";
 
 const tabsLink = [
-  // { id: 0, text: "SEMUA APLIKASI" },
   { id: 1, text: "PELAYANAN" },
   { id: 2, text: "DASHBOARD" },
   { id: 3, text: "BRIDGING" },
@@ -34,34 +45,28 @@ function App() {
   function element1() {
     return (
       <>
-        <Card
-          title={"PELAYANAN"}
-          category={"Pelayanan"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          onClick={() => handleTabs(1)}
-          icon={<RiCustomerService2Fill />}
-        />
-        <Card
-          title={"DASHBOARD"}
-          category={"Pelayanan"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          onClick={() => handleTabs(2)}
-          icon={<BiSolidDashboard />}
-        />
-        <Card
-          title={"BRIDGING"}
-          category={"DOKTER"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          onClick={() => handleTabs(3)}
-          icon={<BsFillInfoSquareFill />}
-        />
-        <Card
-          title={"TUTORIAL"}
-          category={"Pelayanan"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          onClick={() => handleTabs(4)}
-          icon={<MdOndemandVideo />}
-        />
+        <div className="grid grid-cols-2 gap-2 md:gap-8">
+          <Card
+            title={"PELAYANAN"}
+            onClick={() => handleTabs(1)}
+            icon={<RiCustomerService2Fill />}
+          />
+          <Card
+            title={"DASHBOARD"}
+            onClick={() => handleTabs(2)}
+            icon={<BiSolidDashboard />}
+          />
+          <Card
+            title={"BRIDGING"}
+            onClick={() => handleTabs(3)}
+            icon={<BsFillInfoSquareFill />}
+          />
+          <Card
+            title={"TUTORIAL"}
+            onClick={() => handleTabs(4)}
+            icon={<MdOndemandVideo />}
+          />
+        </div>
       </>
     );
   }
@@ -69,31 +74,16 @@ function App() {
   function element2() {
     return (
       <>
-        <Card
-          title={"SMART RSABHK"}
-          category={"Pelayanan"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMiscellaneousServices />}
-          onClick={() => window.open("https://smart.rsabhk.co.id:2222/")}
-        />
-        <Card
-          title={"KEPERAWATAN"}
-          category={"Pelayanan"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<FaUserNurse />}
-        />
-        <Card
-          title={"IGD"}
-          category={"Pelayanan"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<FaAmbulance />}
-        />
-        <Card
-          title={"REHAB MEDIK"}
-          category={"Pelayanan"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<FaProcedures />}
-        />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
+          <Card
+            title={"SMART RSABHK"}
+            icon={<MdMiscellaneousServices />}
+            onClick={() => window.open("https://smart.rsabhk.co.id:2222/")}
+          />
+          <Card title={"KEPERAWATAN"} icon={<FaUserNurse />} />
+          <Card title={"IGD"} icon={<FaAmbulance />} />
+          <Card title={"REHAB MEDIK"} icon={<FaProcedures />} />
+        </div>
       </>
     );
   }
@@ -101,58 +91,38 @@ function App() {
   function element3() {
     return (
       <>
-        <Card
-          title={"EIS"}
-          category={"Dashboard"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbDeviceAnalytics />}
-          onClick={() => window.open("https://eis.rsabhk.co.id/auth/login")}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
+          <Card
+            title={"EIS"}
+            icon={<TbDeviceAnalytics />}
+            onClick={() => window.open("https://eis.rsabhk.co.id/auth/login")}
           />
-        <Card
-          title={"VEDIKA"}
-          category={"Dashboard"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<BsTable />}
-          onClick={() => window.open("https://vedika.rsabhk.co.id/")}
+          <Card
+            title={"VEDIKA"}
+            icon={<BsTable />}
+            onClick={() => window.open("https://vedika.rsabhk.co.id/")}
           />
-        <Card
-          title={"REKAM MEDIK"}
-          category={"Dashboard"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbReportSearch />}
-          />
+          <Card title={"REKAM MEDIK"} icon={<TbReportSearch />} />
+        </div>
       </>
     );
   }
-  
+
   function element4() {
     return (
       <>
-        <Card
-          title={"BIOS"}
-          category={"Bridging"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdTableView />}
-          onClick={() => window.open("https://bridge.rsabhk.co.id/auth/login")}
-        />
-        <Card
-          title={"SAKTI"}
-          category={"Bridging"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<CgShutterstock />}
-        />
-        <Card
-          title={"SATUSEHAT"}
-          category={"Bridging"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<TbChartInfographic />}
-        />
-        <Card
-          title={"KYC"}
-          category={"Bridging"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<DiGoogleAnalytics />}
-        />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
+          <Card
+            title={"BIOS"}
+            icon={<MdTableView />}
+            onClick={() =>
+              window.open("https://bridge.rsabhk.co.id/auth/login")
+            }
+          />
+          <Card title={"SAKTI"} icon={<CgShutterstock />} />
+          <Card title={"SATUSEHAT"} icon={<FaHandHoldingMedical />} />
+          <Card title={"KYC"} icon={<BsPeopleFill />} />
+        </div>
       </>
     );
   }
@@ -160,24 +130,17 @@ function App() {
   function element5() {
     return (
       <>
-        <Card
-          title={"CARA DAFTAR PASIEN"}
-          category={"Tutorial"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<FaHouseMedicalCircleExclamation />}
-        />
-        <Card
-          title={"CARA MEMBUAT REKAM MEDIS"}
-          category={"Tutorial"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<MdMedicalInformation />}
-        />
-        <Card
-          title={"CARA DAFTAR RAWAT INAP"}
-          category={"Tutorial"}
-          link={"https://smart.rsabhk.co.id:2222/"}
-          icon={<FaHandHoldingMedical />}
-        />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
+          <Card
+            title={"CARA DAFTAR PASIEN"}
+            icon={<FaHouseMedicalCircleExclamation />}
+          />
+          <Card
+            title={"CARA MEMBUAT REKAM MEDIS"}
+            icon={<MdMedicalInformation />}
+          />
+          <Card title={"CARA DAFTAR RAWAT INAP"} icon={<FaBookMedical />} />
+        </div>
       </>
     );
   }
@@ -214,10 +177,10 @@ function App() {
             </div>
           </div>
           <div className="px-4 md:px-0 relative z-10 flex justify-center flex-col items-center centering text-neutral-800">
-            <h1 className="font-extrabold text-center text-4xl">
+            <h1 className="font-extrabold text-center text-3xl md:text-5xl">
               APLIKASI SIMRS
             </h1>
-            <p className="text-center font-semibold">
+            <p className="text-center font-semibold mt-2">
               APLIKASI PENUNJANG PELAYANAN DAN UNIT RS &quot;RSABHK&quot;
             </p>
           </div>
@@ -249,9 +212,9 @@ function App() {
       </header>
 
       <section className="container xl:max-w-[1170px] mx-auto">
-        <div className="flex-col md:flex-row flex gap-4 mt-16 mb-36">
-          <div className="md:w-[250px] flex w-full pl-6 md:ml-0 md:flex-none font-semibold">
-            <ul className="flex flex-col gap-2">
+        <div className="flex-col md:flex-row flex gap-4 md:mt-16 mt-5 mb-36">
+          <div className="md:w-[250px] flex w-full px-4 md:ml-0 md:flex-none font-semibold">
+            <ul className="grid grid-cols-2 md:grid-cols-none md:flex md:flex-col w-full gap-2">
               {tabsLink.map((item) => {
                 const active = activeTabs === item.id;
                 return (
@@ -259,7 +222,7 @@ function App() {
                     <div
                       className={`${
                         active ? "bg-green-900 text-white" : ""
-                      } inline-flex px-3 py-1 rounded-[3px] items-center gap-2 cursor-pointer`}
+                      } flex md:inline-flex px-3 py-1 rounded-[3px] items-center gap-2 cursor-pointer`}
                       onClick={() => handleTabs(item.id)}
                     >
                       {item.id === 1 && (
@@ -298,9 +261,7 @@ function App() {
               })}
             </ul>
           </div>
-          <div className="flex-1 px-4 md:px-0">
-            <div className="grid md:grid-cols-3 gap-8">{elements()}</div>
-          </div>
+          <div className="flex-1 px-4 md:px-0">{elements()}</div>
         </div>
       </section>
     </>

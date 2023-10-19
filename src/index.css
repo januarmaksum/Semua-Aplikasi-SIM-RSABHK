@@ -12,7 +12,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar {
@@ -44,7 +44,7 @@ body {
 }
 
 .card:hover:before {
-  transform: scale(21);
+  transform: scale(30);
 }
 
 .card::before {
@@ -76,7 +76,7 @@ body {
 }
 
 .card:hover .icons {
-    color: white!important;
+  color: white !important;
 }
 
 .go-corner {
@@ -118,4 +118,19 @@ body {
 
 .custom-shape-divider-bottom-1697618662 .shape-fill {
   fill: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .card:hover:before {
+    transform: none;
+  }
+
+  .card:hover h3 {
+    transition: none;
+    color: #262626;
+  }
+
+  .card:hover .icons {
+    color: #047759 !important;
+  }
 }
