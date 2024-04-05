@@ -1,5 +1,8 @@
-# Kumpulan aplikasi SIMRS RSABHK
+![aplikasi-simrs](https://github.com/januarmaksum/Semua-Aplikasi-SIM-RSABHK/assets/16111179/d9d53ccf-97d8-4790-8a10-abe3a7187910)
+## Kumpulan aplikasi SIMRS RS Harapan Kita
 
-### How to run this project
-npm install <br>
-npm run dev
+### Instalation
+```
+$ npm install
+$ npm run dev
+```
